@@ -1,0 +1,460 @@
+html{
+    scroll-behavior: smooth;
+}
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'sans serif';
+    background: #1c92d2;
+}
+.navbar{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    z-index: 100000000;
+    justify-content: flex-start;
+}
+.navbar .contain{
+    font-size: 20px;
+    padding:auto;
+}
+.navbar .contain ul li{
+    display: inline-block;
+    padding: 0 0 0 25px;
+    color: #fff;
+}
+.navbar .contain ul li a{
+     padding: 10px 20px;
+    color: #fff;
+    border: solid 2px white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.navbar .contain ul li a:hover{
+  color: black;
+  background-color: white;
+  transition: all 300ms
+}
+.navbar .contain ul li a:focus{
+    color: black;
+    background-color: white;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-top: 125px;
+    justify-content: space-around
+}
+.textos {
+    width: 50%;
+    color: #fff
+}
+.textos h2 {
+    font-size: 50px;
+    animation: moverIzquierda 1s ease-in
+}
+.textos a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 0;
+    animation: arriba 1s ease-in;
+    box-shadow: 7px 13px 37px #000
+}
+.textos a:hover{
+    color: black;
+    background-color: white;
+}
+.prins {
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    animation: arriba 1s ease-in
+}
+.banner-vector {
+    animation: movimiento 2.5s linear infinite
+}
+.banner-vector .prins {
+    width: 600px;
+    display: block
+}
+.titulo h2{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 325px;
+}
+.titulo b{
+    color:#000 ;
+}
+.info p{
+    color: #fff;
+    font-size: 25px;
+    padding-top: 50px;
+    text-align: center;
+}
+.img-tecun img{
+    width: 500px;
+    margin-top: 50px;
+    margin: 400px;
+}
+.img-marimba img{
+    width: 500px;
+    margin-top: 50px;
+    margin: 400px;
+}
+.pres video{
+    width: 1000px;
+    margin-top: 50px;
+    margin: 190px;
+}
+#creditos{
+    margin-top: 25px;
+}
+#creditos h4{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+#creditos b{
+    color: black;
+}
+#ckbox {
+    display: none 
+}
+.bar-responsive{
+    display: none
+}
+@keyframes movimiento {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(30px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+@keyframes arriba {
+    0% {
+        opacity: 0;
+        transform: translatey(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes abajo {
+    0% {
+        opacity: 0;
+        transform: translateY(-100);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:1115px){
+    .titulo{
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .info{
+        padding: 50px 0;
+        text-align: center;
+    }
+    .img-tecun img{
+        width: 375px;
+        margin-top: 50px;
+        margin-left: 350px
+    }
+    .img-marimba img{
+     width: 375px;
+    margin-top: 50px;
+    margin-left: 350px
+    }
+    .pres video{
+        width: 75%;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+     .container{
+       max-width: 950px;
+       width: 90%;
+    }
+    .navbar .contain ul li a{
+        max-width: 950px;
+        width: 80%;
+        padding: 10px 5px ;
+    }
+    .prins{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:930px){
+    .navbar .contain ul li a{
+        max-width: 950px;
+        width: 80%;
+        padding: 10px 2.5px ;
+    }
+  .pres video{
+    width: 700px;
+    margin-left: 115px ;
+  }
+   .img-tecun img{
+        width: 375px;
+        margin-top: 50px;
+        margin-left: 300px
+    }
+    .img-marimba img{
+     width: 375px;
+    margin-top: 50px;
+    margin-left: 300px
+    }
+     .prins{
+         height: 350px;
+    }
+}
+@media screen and (max-width:865px){
+    .banner-vector .prins {
+        height: 370px;
+        width: 370px;
+    }
+    .navbar .contain ul li {
+        padding: 0 0 0 10px;
+    }
+    .navbar .contain ul li a{
+        max-width: 950px;
+        width: 80%;
+        padding: 10px 2.5px ;
+    }
+    .titulo h2{
+        font-size: 30px;
+    }
+    .info p{
+      font-size: 20px
+    }
+    .pres video{
+        width: 650px;
+        margin-left: 100px ;
+      }
+      .img-tecun img{
+        width: 250px;
+        margin-top: 50px;
+        margin-left: 325px
+    }
+    .img-marimba img{
+     width: 250px;
+    margin-top: 50px;
+    margin-left: 325px
+    }
+}
+
+@media screen and (max-width: 800px){
+    .bar-responsive {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        font-size: 25px;
+        position: fixed;
+    }
+    .navbar {
+        position: fixed;
+        width: 250px;
+        margin-left: 40px;
+        height: 350px;
+        background: transparent;
+        background: #1c92d2;
+        border: 2px solid white;
+        border-radius: 25px;
+        align-items: center;
+        left: -100%;
+        transition: all 500ms;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    .contain a{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 7px 8px 15px 2px #000;
+    }
+    #ckbox:checked~.navbar{
+        left: 0;
+    }
+    .textos h2{
+        font-size: 35px
+    }
+}
+@media screen and (max-width: 680px){
+    .pres video{
+        width: 450px;
+        margin-left: 100px ;
+      }
+      .img-tecun img{
+        width: 225px;
+        margin-top: 50px;
+        margin-left: 225px
+    }
+    .img-marimba img{
+     width: 225px;
+    margin-top: 50px;
+    margin-left: 225px
+    }
+    .banner-vector .prins{
+        height: 250px;
+        width: 250px;
+    }
+    
+}
+@media screen and (max-width: 610px){
+    .pres video{
+        width: 450px;
+        margin-left: 75px ;
+      }
+      .img-tecun img{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 150px
+    }
+    .img-marimba img{
+     width: 200px;
+    margin-top: 50px;
+    margin-left: 150px
+    }
+}
+@media screen and (max-width: 570px){
+    .pres video{
+        width: 400px;
+        margin-left: 75px ;
+      }
+      .img-tecun img{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 150px
+    }
+    .img-marimba img{
+     width: 200px;
+    margin-top: 50px;
+    margin-left: 150px
+    }
+}
+@media screen and (max-width: 520px){
+    .pres video{
+        width: 350px;
+        margin-left: 50px ;
+      }
+      .img-tecun img{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 125px
+    }
+    .img-marimba img{
+     width: 200px;
+    margin-top: 50px;
+    margin-left: 125px
+    }
+    
+}
+@media screen and (max-width: 450px){
+    .container {
+        width:100%;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .banner-vector .prins {
+        height: 300px;
+        width: 300px;
+    }
+    .textos {
+        width: 100%;
+        text-align: center;
+    }
+    .textos h2 {
+        font-size: 30px;
+    }
+    .navbar {
+        position: fixed;
+        width: 65%;
+        height: 400px;
+        background: #1c92d2;
+        border: 2px solid white;
+        border-radius: 20px;
+        align-items: center;
+        left: -100%;
+        transition: all 2s;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    .bar-responsive{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 360px){
+    .pres video{
+        width: 300px;
+        margin-left: 20px ;
+      }
+      .img-tecun img{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 75px
+    }
+    .img-marimba img{
+     width: 200px;
+    margin-top: 50px;
+    margin-left: 75px
+    }
+    .banner-vector .prins {
+        height: 250px;
+        width: 250px;
+    }
+}
+@media screen  and (max-width: 280px){
+    .pres video{
+        width: 250px;
+        margin-left: 5px ;
+      }
+      .img-tecun img{
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 25px
+    }
+    .img-marimba img{
+     width: 200px;
+    margin-top: 50px;
+    margin-left: 25px
+    }
+    .banner-vector .prins {
+        height: 225px;
+        width: 225px;
+    }
+}
+
